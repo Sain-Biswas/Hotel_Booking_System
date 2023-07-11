@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hayat Residency-Dreamstayz</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Livvic:ital,wght@1,600&family=Roboto+Slab:wght@500&display=swap');
+    body{
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto Slab', serif;
+      background-color: #f8f8f8;
+    }
+    a {
+      text-decoration: none;
+    }
+    nav {
+      width: 98.9vw;
+      height: 13vh;
+      display: flex;
+      background-color: #373f47;
+      justify-content: space-between;
+    }
+    .navlogo {
+      width: 17vw;
+      height: 11vw;
+      margin-left: 4vw;
+    }
+    .nav1 {
+      width: 56vw;
+    }
+    .nav1 .nav1ul {
+      list-style: none;
+      display: flex;
+      width: 53vw;
+      padding-top: 0vh;
+      font-size: 2vw;
+      justify-content: space-between;
+    }
+    .nav1 .nav1ul li a{
+      color: blanchedalmond;
+    }
+    .nav1 .nav1ul li a:hover {
+      color: #c3c9e9;
+    }
+    .namehot {
+      text-align: right;
+      height: 15vh;
+      font-size: 5vw;
+      color: blanchedalmond;
+      background-color: #373f47;
+      font-style: italic;
+      padding-right: 5vw;
+    }
+    .navrese {
+      color: blanchedalmond;
+      cursor: pointer;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    .parentpho {
+      display: grid;
+      font-family: 'Poppins', sans-serif;
+      width: 98vw;
+      margin-top: 5vh;
+      margin-bottom: 5vh;
+      height: 41vw;
+      grid-template-rows: 20vw 1vw 20vw;
+      grid-template-columns: 5vw 35vw 2vw 51vw 5vw;
+    }
+    .ratings {
+      grid-area: 1/2/2/3;
+      overflow: hidden;
+    }
+    .ratings .ratings1 {
+      z-index: 1;
+      position: absolute;
+      width: 35vw;
+      clip-path: circle(0% at 0 50%);
+    }
+    .ratings .ratings1.active {
+      clip-path: circle(150% at 0 50%);
+      transition: 2s;
+      transition-property: clip-path;
+    }
+    .ratings .ratings1 img {
+      z-index: 1;
+      width: 35vw;
+      height: 20vw;
+      border-radius: 5px;
+    }
+    .ratings .ratings1 .ratings1-info{
+      position: absolute;
+      top: 0;
+      background-color: transparent;
+      padding: 0.5% 1%;
+    }
+    .ratings .ratings1 .ratings1-info h2{
+      color: aquamarine;
+      font-size: 2vw;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+    .ratings .rat-nav{
+      z-index: 2;
+      position: relative;
+      display: inline-flex;
+      top: 17vw;
+      left: 17vw;
+      transform: translateX(-50%);
+    }
+    .ratings .rat-nav .rat-btn{
+      background: rgba(255, 255, 255, 0.5);
+      width: 1vw;
+      height: 1vw;
+      margin: 0.5vw;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .ratings .rat-nav .rat-btn.active {
+      background: rgba(255, 255, 255, 1);
+      box-shadow: 0 0 1px rgba(255, 255, 255, 1);
+    }
+
+    .outside {
+      grid-area: 3/2/4/3;
+      overflow: hidden;
+    }
+    .outside .outside1 {
+      z-index: 1;
+      position: absolute;
+      width: 35vw;
+      clip-path: circle(0% at 0 50%);
+    }
+    .outside .outside1.active {
+      clip-path: circle(150% at 0 50%);
+      transition: 2s;
+      transition-property: clip-path;
+    }
+    .outside .outside1 img {
+      z-index: 1;
+      width: 35vw;
+      height: 20vw;
+      border-radius: 5px;
+    }
+    .outside .out-nav{
+      z-index: 2;
+      position: relative;
+      display: inline-flex;
+      top: 17vw;
+      left: 17vw;
+      transform: translateX(-50%);
+    }
+    .outside .out-nav .out-btn{
+      background: rgba(255, 255, 255, 0.5);
+      width: 1vw;
+      height: 1vw;
+      margin: 0.5vw;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .outside .out-nav .out-btn.active {
+      background: rgba(255, 255, 255, 1);
+      box-shadow: 0 0 1px rgba(255, 255, 255, 1);
+    }
+
+    .inside {
+      grid-area: 1/4/4/5;
+      overflow: hidden;
+    }
+    .inside .inside1 {
+      z-index: 1;
+      position: absolute;
+      width: 51vw;
+      height: 41vw;
+      clip-path: circle(0% at 0 50%);
+    }
+    .inside .inside1.active {
+      clip-path: circle(150% at 0 50%);
+      transition: 2s;
+      transition-property: clip-path;
+    }
+    .inside .inside1 img {
+      z-index: 1;
+      width: 51vw;
+      height: 41vw;
+      border-radius: 5px;
+    }
+    .inside .in-nav {
+      z-index: 2;
+      position: relative;
+      display: inline-flex;
+      top: 38vw;
+      width: 12vw;
+      margin: 0;
+      padding: 0;
+      left: 27vw;
+      transform: translateX(-50%);
+    }
+    .inside .in-nav .in-btn{
+      background: rgba(255, 255, 255, 0.5);
+      width: 1vw;
+      height: 1vw;
+      margin: 0.5vw;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .inside .in-nav .in-btn.active {
+      background: rgba(255, 255, 255, 1);
+      box-shadow: 0 0 1px rgba(255, 255, 255, 1);
+    }
+
+
+    .achfa {
+      display: grid;
+      width: 98vw;
+      grid-template-columns: 4vw 65vw 2vw 23vw 4vw;
+      grid-template-rows: 23vw 2vw 23vw;
+      margin-bottom: 5vw;
+    }
+    .achfa-part1 {
+      grid-area: 1/2/-1/3;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1.3fr 8.7fr;
+      row-gap: 0.5vw;
+    }
+    .achfa-part1-1 {
+      grid-area: 1/1/2/2;
+      font-size: 4vw;
+      font-style: italic;
+    }
+    .achfa-part1-2 {
+      grid-area: 2/1/3/2;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      column-gap: 0.5vw;
+      grid-template-rows: 1fr 1fr 1fr;
+      row-gap: 0.5vw;
+    }
+    .achfa-part1-1-1 {
+      grid-area: 1/1/3/2;
+      border-radius: 6px;
+      background-image: url("/pictures/hyt-fac-1.png");
+      background-size: cover;
+      z-index: 0;
+    }
+    .achfa-part1-1-2 {
+      grid-area: 3/1/4/2;
+      border-radius: 6px;
+      background-image: url("/pictures/hyt-fac-2.jpg");
+      background-size: cover;
+      z-index: 0;
+    }
+    .achfa-part1-1-3 {
+      grid-area: 1/2/2/3;
+      border-radius: 6px;
+      background-image: url("/pictures/hyt-fac-4.jpg");
+      background-size: cover;
+      z-index: 0;
+    }
+    .achfa-part1-1-4 {
+      grid-area: 2/2/4/3;
+      border-radius: 6px;
+      background-image: url("/pictures/hyt-fac-3.jpg");
+      background-size: cover;
+      z-index: 0;
+    }
+    .achfa-part1-1-5 {
+      grid-area: 1/3/3/4;
+      border-radius: 6px;
+      background-image: url("/pictures/hyt-fac-6.jpg");
+      background-size: cover;
+      z-index: 0;
+    }
+    .achfa-part1-1-6 {
+      grid-area: 3/3/4/4;
+      border-radius: 6px;
+      background-image: url("/pictures/hyt-fac-5.jpg");
+      background-size: cover;
+      z-index: 0;
+    }
+    .achfa-part1-1-7 {
+      grid-area: 1/4/2/5;
+      border-radius: 6px;
+      background-image: url("/pictures/hyt-fac-7.jpg");
+      background-size: cover;
+      z-index: 0;
+    }
+    .achfa-part1-1-8 {
+      grid-area: 2/4/4/5;
+      border-radius: 6px;
+      background-image: url("/pictures/hyt-fac-8.jpg");
+      background-size: cover;
+      z-index: 0;
+    }
+    .achfa-part-1-hover {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: aliceblue;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      font-size: 1.5vw;
+      z-index: 1;
+      display: none;
+    }
+
+
+    .achfa-part2 {
+      grid-area: 1/4/4/5;
+      border: 2px solid black;
+      border-radius: 8px;
+      overflow-y: scroll;
+      text-align: center;
+      color: blanchedalmond;
+      background-color:#5d5b60;
+      scrollbar-width: 0;
+    }
+    .achfa-part2 p {
+      font-size: 2vw;
+      text-align: justify;
+    }
+    .achfa-part2 h2 {
+      margin: 0.5vw 0;
+      font-size: 3vw;
+    }
+    .achfa-part2::-webkit-scrollbar {
+      display: none;
+    }
+
+
+    .vart {
+      display: grid;
+      width: 100vw;
+      margin-bottom: 5vw;
+      grid-template-columns: 3.5vw 29vw 3vw 29vw 3vw 29vw 3.5vw;
+      grid-template-rows: 46vw;
+    }
+    .vart1{
+      overflow: hidden;
+      grid-area: 1/2/2/3;
+      border-radius: 8px;
+      display: grid;
+      grid-template-columns: 29vw;
+      grid-template-rows: 46vw;
+      font-size: 2vw;
+      padding: 0 0.5vw;
+    }
+    .vart2{
+      overflow: hidden;
+      grid-area: 1/4/2/5;
+      border-radius: 8px;
+      display: grid;
+      grid-template-columns: 29vw;
+      grid-template-rows: 46vw;
+      font-size: 2vw;
+      padding: 0 0.5vw;
+    }
+    .vart3{
+      overflow: hidden;
+      border-radius: 8px;
+      grid-area: 1/6/2/7;
+      display: grid;
+      grid-template-columns: 29vw;
+      grid-template-rows: 46vw;
+      font-size: 2vw;
+      padding: 0 0.5vw;
+    }
+    .vart1  img {
+      height: 46vw;
+      width: 29vw;
+      transition: transform 1s;
+      grid-area: 1/1/2/2;
+    }
+    .vart2  img {
+      height: 46vw;
+      width: 29vw;
+      transition: transform 1s;
+      grid-area: 1/1/2/2;
+    }
+    .vart3  img {
+      height: 46vw;
+      width: 29vw;
+      transition: transform 1s;
+      grid-area: 1/1/2/2;
+    }
+    .vart1:hover img{
+      transform: scale(1.3);
+      filter: brightness(0.6);
+    }
+    .vart2:hover img{
+      transform: scale(1.3);
+      filter: brightness(0.6);
+    }
+    .vart3:hover img{
+      transform: scale(1.3);
+      filter: brightness(0.6);
+    }
+    #vart1 {
+      z-index: 10;
+      color: white;
+      grid-area: 1/1/2/2;
+      background-color: transparent;
+      display: none;
+    }
+    #vart2 {
+      z-index: 10;
+      color: white;
+      grid-area: 1/1/2/2;
+      background-color: transparent;
+      display: none;
+    }
+    #vart3 {
+      z-index: 10;
+      color: white;
+      grid-area: 1/1/2/2;
+      background-color: transparent;
+      display: none;
+    }
+    #vartdis1 {
+      z-index: 10;
+      color: white;
+      grid-area: 1/1/2/2;
+      background-color: transparent;
+      display: flex;
+      align-content: flex-end;
+      flex-wrap: wrap;
+      padding-bottom: 2vw;
+      padding-left: 2vw;
+      font-size: 4vw;
+    }
+    #vartdis2 {
+      z-index: 10;
+      color: white;
+      grid-area: 1/1/2/2;
+      background-color: transparent;
+      display: flex;
+      align-content: flex-end;
+      flex-wrap: wrap;
+      padding-bottom: 2vw;
+      padding-left: 2vw;
+      font-size: 4vw;
+    }
+    #vartdis3 {
+      z-index: 10;
+      color: white;
+      grid-area: 1/1/2/2;
+      background-color: transparent;
+      display: flex;
+      align-content: flex-end;
+      flex-wrap: wrap;
+      padding-bottom: 2vw;
+      padding-left: 2vw;
+      font-size: 4vw;
+    }
+
+    #dropdown {
+      position: relative;
+      list-style: none;
+      display: none;
+      width: 16vw;
+      padding: 0;
+      right: 0.5vw;
+      flex-direction: column;
+      background-color: #8b8982;
+    }
+    #dropdown li {
+      width: 16vw;
+      color: blanchedalmond;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Livvic:ital,wght@1,600&family=Roboto+Slab:wght@500&display=swap');
+    .futor {
+      width: 98.9vw;
+      height: 20vw;
+      font-family: 'Roboto Slab', serif;
+      display: grid;
+      color: azure;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      column-gap: 1vw;
+      grid-template-rows: 1fr;
+      background-color: #373f47;
+    }
+    .futor1 {
+      grid-area: 1/1/2/2;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      font-family: 'Rouge Script', serif;
+      align-content: center;
+      flex-wrap: wrap;
+    }
+    .futor1 img {
+      width: 20vw;
+      height: 14vw;
+      width: 22vw;
+      filter: grayscale();
+    }
+    .futor1 p{
+      font-size: 2vw;
+      text-align: center;
+      margin: 0;
+      width: 22vw;
+      padding: 0;
+    }
+    .futor2{
+      grid-area: 1/2/2/3;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-content: center;
+      flex-wrap: wrap;
+    }
+    .futor2 p {
+      font-size: 2vw;
+      margin: 0.3vw 0vw;
+      width: 22vw;
+      padding: 0;
+    }
+    .futor2 address {
+      font-size: 1.5vw;
+    }
+    .futor3{
+      grid-area: 1/3/2/4;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-content: center;
+      flex-wrap: wrap;
+    }
+    .futor3 a {
+      text-decoration: none;
+      margin: 0.5vw 0vw;
+      color: azure;
+      font-size: 2vw;
+    }
+    .futor3 a:hover {
+      color: #f4decb;
+    }
+    .futor3 div {
+      display: flex;
+      justify-content: space-around;
+    }
+    .futor3 img {
+      width: 2vw;
+      height: 2vw;
+      filter: grayscale();
+    }
+    .futor3 img:hover {
+      filter: grayscale(0);
+    }
+    .futor4{
+      grid-area: 1/4/2/5;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-content: center;
+      flex-wrap: wrap;
+    }
+    .futor4 p {
+      width: 22vw;
+      font-size: 1.5vw;
+      padding: 0;
+      margin: 0.5vw 0vw;
+    }
+
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="navlogo">
+    <img src="Dreamstayz-logo.png" alt="Dreamstayz" height="100%" width="100%">
+  </div>
+  <div class="nav1">
+    <ul class="nav1ul">
+      <li> <a href="Hayat-Dreamstayz.html">Home</a> </li>
+      <li> <a href="#">Branches</a> </li>
+      <li> <a href="#">Events</a> </li>
+      <li> <a href="#">Gallery</a> </li>
+      <li id="navres" class="navrese" onmouseover="hovinres()" onmouseout="hovoutres()" > Reservations &#x25BC;
+        <ul id="dropdown">
+          <li><a href="#">Book a Stay</a></li>
+          <li><a href="See-Reservation.html">See Reservation</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+<script type="text/javascript">
+  function hovinres(){
+    let w = document.getElementById('navres');
+    w.style.color = '#c3c9e9';
+    let v = document.getElementById('dropdown');
+    v.style.display = 'flex';
+  }
+  function hovoutres(){
+    let w = document.getElementById('navres');
+    w.style.color = 'blanchedalmond';
+    let v = document.getElementById('dropdown');
+    v.style.display = 'none';
+  }
+</script>
+<div class="namehot">
+  Hayat Residency
+</div>
+
+<div class="parentpho">
+  <div class="ratings">
+    <div class="ratings1 active">
+      <img src="\pictures\hyt-smain-1.jpg" alt="!" width="100%" height="100%">
+      <div class="ratings1-info">
+        <h2 style="color: violet;">Open Pool with amazing view</h2>
+      </div>
+    </div>
+    <div class="ratings1">
+      <img src="\pictures\hyt-smain-2.jpg" alt="!" width="100%" height="100%">
+      <div class="ratings1-info">
+        <h2 style="color: black; font-weight: strong;">Comfortable Sitting Hall</h2>
+      </div>
+    </div>
+    <div class="ratings1">
+      <img src="\pictures\hyt-smain-3.jpg" alt="!" width="100%" height="100%">
+      <div class="ratings1-info">
+        <h2>Luxury Indoor Pool</h2>
+      </div>
+    </div>
+    <div class="ratings1">
+      <img src="\pictures\hyt-smain-4.jpg" alt="!" width="100%" height="100%">
+      <div class="ratings1-info">
+        <h2 style="color: rgb(255, 136, 0);">Classy Dinning Hall</h2>
+      </div>
+    </div>
+    <div class="ratings1">
+      <img src="\pictures\hyt-smain-5.jpg" alt="!" width="100%" height="100%">
+      <div class="ratings1-info">
+        <h2>Amazing Room View</h2>
+      </div>
+    </div>
+    <div class="rat-nav">
+      <div class="rat-btn active"></div>
+      <div class="rat-btn"></div>
+      <div class="rat-btn"></div>
+      <div class="rat-btn"></div>
+      <div class="rat-btn"></div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    var slides1 = document.querySelectorAll('.ratings1');
+    var btns1 = document.querySelectorAll('.rat-btn');
+    let currentSlide1 = 1;
+
+    var manualNav1 = function(manual1){
+      slides1.forEach((slide1) => {
+        slide1.classList.remove('active');
+        btns1.forEach((btn1) => {
+          btn1.classList.remove('active');
+        });
+      });
+
+      slides1[manual1].classList.add('active');
+      btns1[manual1].classList.add('active');
+    }
+
+    btns1.forEach((btn,i)=>{
+      btn.addEventListener("click", () => {
+        manualNav1(i);
+        currentSlide1 = i;
+      });
+    });
+  </script>
+
+  <div class="outside">
+    <div class="outside1 active">
+      <img src="\pictures\hyt-mrev-1.jpg" alt="!" width="100%" height="100%">
+    </div>
+    <div class="outside1">
+      <img src="\pictures\hyt-mrev-2.jpg" alt="!" width="100%" height="100%">
+    </div>
+    <div class="outside1">
+      <img src="\pictures\hyt-mrev-3.jpg" alt="!" width="100%" height="100%">
+    </div>
+    <div class="outside1">
+      <img src="\pictures\hyt-mrev-4.jpg" alt="!" width="100%" height="100%">
+    </div>
+    <div class="outside1">
+      <img src="\pictures\hyt-mrev-5.jpg" alt="!" width="100%" height="100%">
+    </div>
+    <div class="out-nav">
+      <div class="out-btn active"></div>
+      <div class="out-btn"></div>
+      <div class="out-btn"></div>
+      <div class="out-btn"></div>
+      <div class="out-btn"></div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    var slides2 = document.querySelectorAll('.outside1');
+    var btns2 = document.querySelectorAll('.out-btn');
+    let currentSlide2 = 1;
+
+    var manualNav2 = function(manual2){
+      slides2.forEach((slide2) => {
+        slide2.classList.remove('active');
+        btns2.forEach((btn2) => {
+          btn2.classList.remove('active');
+        });
+      });
+
+      slides2[manual2].classList.add('active');
+      btns2[manual2].classList.add('active');
+    }
+
+    btns2.forEach((btn2,i)=>{
+      btn2.addEventListener("click", () => {
+        manualNav2(i);
+        currentSlide2 = i;
+      });
+    });
+  </script>
+
+  <div class="inside">
+    <div class="inside1 active">
+      <img src="/pictures/hyt-main-1.jpg" alt="!" width="51vw" height="41vw">
+    </div>
+    <div class="inside1">
+      <img src="/pictures/hyt-main-2.jpg" alt="!" width="51vw" height="41vw">
+    </div>
+    <div class="inside1">
+      <img src="/pictures/hyt-main-3.jpg" alt="!" width="51vw" height="41vw">
+    </div>
+    <div class="inside1">
+      <img src="/pictures/hyt-main-4.jpg" alt="!" width="51vw" height="41vw">
+    </div>
+    <div class="inside1">
+      <img src="/pictures/hyt-main-5.jpg" alt="!" width="51vw" height="41vw">
+    </div>
+    <div class="in-nav">
+      <div class="in-btn active"></div>
+      <div class="in-btn"></div>
+      <div class="in-btn"></div>
+      <div class="in-btn"></div>
+      <div class="in-btn"></div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    var slides3 = document.querySelectorAll('.inside1');
+    var btns3 = document.querySelectorAll('.in-btn');
+    let currentSlide3 = 1;
+
+    var manualNav3 = function(manual3){
+      slides3.forEach((slide3) => {
+        slide3.classList.remove('active');
+        btns3.forEach((btn3) => {
+          btn3.classList.remove('active');
+        });
+      });
+
+      slides3[manual3].classList.add('active');
+      btns3[manual3].classList.add('active');
+    }
+
+    btns3.forEach((btn3,i)=>{
+      btn3.addEventListener("click", () => {
+        manualNav3(i);
+        currentSlide3 = i;
+      });
+    });
+  </script>
+
+</div>
+
+<div class="achfa">
+  <div class="achfa-part1">
+    <div class="achfa-part1-1">
+      Amenities
+    </div>
+    <div class="achfa-part1-2">
+      <div class="achfa-part1-1-1" onmouseover="hovin1()" onmouseout="hovout1()" >
+        <div class="achfa-part-1-hover" id="_1">
+          SPA
+        </div>
+      </div>
+      <div class="achfa-part1-1-2" onmouseover="hovin2()" onmouseout="hovout2()" >
+        <div class="achfa-part-1-hover" id="_2">
+          All Weather Swimming Pool
+        </div>
+      </div>
+      <div class="achfa-part1-1-3" onmouseover="hovin3()" onmouseout="hovout3()" >
+        <div class="achfa-part-1-hover" id="_3">
+          Your GYM with all equipments You will Need
+        </div>
+      </div>
+      <div class="achfa-part1-1-4" onmouseover="hovin4()" onmouseout="hovout4()" >
+        <div class="achfa-part-1-hover" id="_4">
+          Restaurant with Every Cuisine You want to Taste
+        </div>
+      </div>
+      <div class="achfa-part1-1-5" onmouseover="hovin5()" onmouseout="hovout5()" >
+        <div class="achfa-part-1-hover" id="_5">
+          Our Medical staff to assist you 24/7 if You Need
+        </div>
+      </div>
+      <div class="achfa-part1-1-6" onmouseover="hovin6()" onmouseout="hovout6()" >
+        <div class="achfa-part-1-hover" id="_6">
+          Your room Theme As you Want it to Be
+        </div>
+      </div>
+      <div class="achfa-part1-1-7" onmouseover="hovin7()" onmouseout="hovout7()" >
+        <div class="achfa-part-1-hover" id="_7">
+          Room Service always at your Door-steps
+        </div>
+      </div>
+      <div class="achfa-part1-1-8" onmouseover="hovin8()" onmouseout="hovout8()" >
+        <div class="achfa-part-1-hover" id="_8">
+          Secure Parking
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="achfa-part2">
+    <h2>About Hayat</h2>
+    <p>The magnificent Hayat Hotel provides its visitors with first-rate facilities and services. With its central location, it offers quick access to the city's main attractions and business districts. The hotel's exquisite interiors, roomy accommodations, and cutting-edge amenities meet the requirements of both business and leisure travellers.
+      <br> <br>
+      The Hayat Hotel's rooms are nicely furnished and well-equipped, making for a pleasant stay. Air conditioning, a flat-screen TV, a minibar, and high-speed internet are all included in the accommodation amenities. Additionally, the hotel provides 24-hour room service to ensure that visitors' needs are promptly met.
+      The Hayat Hotel is renowned for its first-rate dining selections. The hotel features a number of restaurants that provide food from all over the world as well as traditional meals from the area. The hotel's chefs produce each dish from scratch using only the freshest, highest-quality ingredients, giving visitors a fantastic dining experience.
+      <br> <br>
+      The Hayat Hotel has great facilities for business meetings, seminars, and other events in addition to its lodging and eating options. The hotel has a number of fully furnished meeting rooms that can hold a sizable number of visitors. Additionally skilled and knowledgeable in planning and managing events, the hotel staff makes sure everything goes according to plan.
+      Overall, the Hayat Hotel is a great option for visitors seeking a posh and relaxing stay in the area. The hotel offers a remarkable experience that guests are sure to remember for a very long time thanks to its first-rate amenities, first-rate services, and excellent location.
+    </p>
+  </div>
+</div>
+
+<script type="text/javascript">
+  function hovin1(){
+    let w = document.getElementById('_1');
+    w.style.display = 'block';
+  }
+  function hovout1(){
+    let w = document.getElementById('_1');
+    w.style.display = 'none';
+  }
+  function hovin2(){
+    let w = document.getElementById('_2');
+    w.style.display = 'block';
+  }
+  function hovout2(){
+    let w = document.getElementById('_2');
+    w.style.display = 'none';
+  }
+  function hovin3(){
+    let w = document.getElementById('_3');
+    w.style.display = 'block';
+  }
+  function hovout3(){
+    let w = document.getElementById('_3');
+    w.style.display = 'none';
+  }
+  function hovin4(){
+    let w = document.getElementById('_4');
+    w.style.display = 'block';
+  }
+  function hovout4(){
+    let w = document.getElementById('_4');
+    w.style.display = 'none';
+  }
+  function hovin5(){
+    let w = document.getElementById('_5');
+    w.style.display = 'block';
+  }
+  function hovout5(){
+    let w = document.getElementById('_5');
+    w.style.display = 'none';
+  }
+  function hovin6(){
+    let w = document.getElementById('_6');
+    w.style.display = 'block';
+  }
+  function hovout6(){
+    let w = document.getElementById('_6');
+    w.style.display = 'none';
+  }
+  function hovin7(){
+    let w = document.getElementById('_7');
+    w.style.display = 'block';
+  }
+  function hovout7(){
+    let w = document.getElementById('_7');
+    w.style.display = 'none';
+  }
+  function hovin8(){
+    let w = document.getElementById('_8');
+    w.style.display = 'block';
+  }
+  function hovout8(){
+    let w = document.getElementById('_8');
+    w.style.display = 'none';
+  }
+</script>
+
+
+<div class="vart">
+  <div class="vart1" onmouseover="hoverin1()" onmouseout="hoverout1()" >
+    <img src="/pictures/hyt-ver-del.jpg" alt="Deluxe">
+    <div id="vart1">
+      <a href="Deluxe-Hayat.php" style="color: white;">
+        <p><strong>Deluxe Room</strong></p>
+        <p>With an elegant business like decor, this standard deluxe 432 square feet room is the most spacious in the city with the option of a king size or a twin bed.</p>
+        <p>SIZE : 432 sq. ft. <br>VIEW : City/Pool <br>2 Adult + 2 Childs <br>Bed Type: King/Twin <br>Extra Bed Not Allowed</p>
+        <p>Satrting @ Rs.7499</p>
+      </a>
+    </div>
+    <p id="vartdis1">
+      Deluxe
+    </p>
+  </div>
+  <div class="vart2" onmouseover="hoverin2()" onmouseout="hoverout2()" >
+    <img src="/pictures/hyt-ver-pre.jpg" alt="Premium">
+    <div id="vart2">
+      <a href="Premium-Hayat.php" style="color: white;">
+        <p><strong>Premium Room</strong></p>
+        <p>With an elegant business like decor, the Premium room is a pool/city facing 452 square feet room that comes with a twin size bed. Premier Room offers all modern-day facilities along with a scenic  view of the famous landmarks of the city.</p>
+        <p>SIZE : 452 sq. ft. <br>VIEW : City/Pool <br>2 Adult + 2 Childs <br>Bed Type: King/Twin <br>Extra Bed Allowed</p>
+        <p>Satrting @ Rs.8999</p>
+      </a>
+    </div>
+    <p id="vartdis2">
+      Premium
+    </p>
+  </div>
+  <div class="vart3" onmouseover="hoverin3()" onmouseout="hoverout3()" >
+    <img src="/pictures/hyt-ver-exe.jpg" alt="Executive Suite">
+    <div id="vart3">
+      <a href="Executive-Hayat.php" style="color: white;">
+        <p><strong>Executive Suite</strong></p>
+        <p>Designed keeping in mind the requirement of today’s busy traveler, it is a perfect blend of luxury and comfort, with our distinctive amenities.Spread over 502 square feet, the club room on the higher floors of the hotel gives a holistic view of the city/pool.A space that is truly tempting.</p>
+        <p>SIZE : 502 sq. ft. <br>VIEW : City/Pool <br>2 Adult + 2 Childs <br>Bed Type: King/Twin <br>Extra Bed Allowed</p>
+        <p>Satrting @ Rs.11999</p>
+      </a>
+    </div>
+    <p id="vartdis3">
+      Executive Suite
+    </p>
+  </div>
+</div>
+<script type="text/javascript">
+  function hoverin1(){
+    let w = document.getElementById('vart1');
+    w.style.display = 'block';
+    let z = document.getElementById('vartdis1');
+    z.style.display = 'none';
+  }
+  function hoverout1(){
+    let w = document.getElementById('vart1');
+    w.style.display = 'none';
+    let z = document.getElementById('vartdis1');
+    z.style.display = 'flex';
+  }
+  function hoverin2(){
+    let w = document.getElementById('vart2');
+    w.style.display = 'block';
+    let z = document.getElementById('vartdis2');
+    z.style.display = 'none';
+  }
+  function hoverout2(){
+    let w = document.getElementById('vart2');
+    w.style.display = 'none';
+    let z = document.getElementById('vartdis2');
+    z.style.display = 'flex';
+  }
+  function hoverin3(){
+    let w = document.getElementById('vart3');
+    w.style.display = 'block';
+    let z = document.getElementById('vartdis3');
+    z.style.display = 'none';
+  }
+  function hoverout3(){
+    let w = document.getElementById('vart3');
+    w.style.display = 'none';
+    let z = document.getElementById('vartdis3');
+    z.style.display = 'flex';
+  }
+</script>
+
+
+<div class="futor">
+  <div class="futor1">
+    <img src="Dreamstayz-logo.png" alt="Dreamstayz">
+    <p>Dreamstayz Pvt. Ltd.</p>
+    <p>Since 2000</p>
+  </div>
+  <div class="futor2">
+    <p>Address : <Address>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus, quibusdam
+  </Address></p>
+    <p>E-mail : <address>contact@dreamstayz.in</address></p>
+    <p>Phone : <address>+91 02587 41369</address> </p>
+
+
+  </div>
+  <div class="futor3">
+    <a href="#">Home</a><a href="#">Book a Stay</a><a href="#">Check Reservation</a><a href="#">Branches</a><a href="#">Contact Us</a>
+    <div>
+      <a href="https://www.facebook.com" target="_blank"> <img src="/pictures/facebook.png" alt="F"> </a><a href="https://www.instagram.com" target="_blank"> <img src="/pictures/instagram.png" alt="I"> </a><a href="https://www.twitter.com" target="_blank"> <img src="/pictures/twitter.png" alt="T"> </a>
+    </div>
+  </div>
+  <div class="futor4">
+    <p>
+      Contact Developers: <br>
+    </p>
+    <p>
+      Head : sain.biswas2614@gmail.com <br>
+    </p>
+    <p>
+      Design : <br> mayanksharmarrk30@gmail.com & saurya@gmail.com <br>
+    </p>
+    <p>
+      Content & Testing : <br> ujjwalks677@gmail.com & gautamdas062004@gmail.com
+    </p>
+  </div>
+</div>
+
+</body>
+</html>
